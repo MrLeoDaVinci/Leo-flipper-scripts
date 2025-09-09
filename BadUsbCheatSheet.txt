@@ -1,0 +1,197 @@
+BASIC COMMANDS
+DELAY <ms> – Pause script for <ms> milliseconds
+Works: Windows 10/11, macOS, Linux, iOS, Android
+
+STRING <text> – Type exact text
+Works: Windows 10/11, macOS, Linux, iOS, Android
+
+ENTER – Press Enter/Return
+Works: Windows 10/11, macOS, Linux, iOS, Android
+
+TAB – Move cursor to next field
+Works: Windows 10/11, macOS, Linux, iOS, Android
+
+SPACE – Press Spacebar
+Works: Windows 10/11, macOS, Linux, iOS, Android
+
+BACKSPACE – Delete character to the left
+Works: Windows 10/11, macOS, Linux, iOS, Android
+
+DELETE – Delete selected item/text
+Works: Windows 10/11, macOS, Linux, Android
+Doesnt work: iOS
+
+ESCAPE – Cancel action / close dialog
+Works: Windows 10/11, macOS, Linux, iOS, Android
+
+MODIFIER KEYS
+CTRL – Control key for shortcuts
+Works: Windows 10/11, Linux
+Doesnt work: macOS (use COMMAND), iOS, Android
+
+ALT – Alt key for menus / shortcuts
+Works: Windows 10/11, Linux
+Doesnt work: macOS (use OPTION), iOS, Android
+
+SHIFT – Uppercase letters / combined shortcuts
+Works: All platforms
+
+GUI – Windows key / Command key / Android launcher key
+Works: Windows 10/11, macOS, Linux, Android
+Doesnt work: iOS
+
+NAVIGATION KEYS
+UPARROW / DOWNARROW / LEFTARROW / RIGHTARROW – Move cursor
+Works: All platforms
+
+HOME – Move cursor to start of line/document
+Works: Windows 10/11, macOS, Linux, Android
+Doesnt work: iOS
+
+END – Move cursor to end of line/document
+Works: Windows 10/11, macOS, Linux, Android
+Doesnt work: iOS
+
+PAGEUP / PAGEDOWN – Scroll up/down
+Works: Windows 10/11, macOS, Linux, Android
+Doesnt work: iOS
+
+FUNCTION KEYS
+F1-F12 – Standard function keys
+Works: Windows 10/11, macOS, Linux
+Doesnt work: iOS, Android
+
+COMMON COMBINATIONS
+CTRL ALT DEL – Open security options
+Works: Windows 10/11
+Doesnt work: macOS, Linux, iOS, Android
+
+GUI r – Open Run dialog / launcher
+Works: Windows 10/11, macOS, Linux, Android
+Doesnt work: iOS
+
+GUI b – Open browser / launcher
+Works: Android
+Doesnt work: Windows 10/11, macOS, Linux, iOS
+
+GUI e – Open Explorer / Finder
+Works: Windows 10/11, macOS, Linux
+Doesnt work: iOS, Android
+
+ALT F4 – Close active window
+Works: Windows 10/11, macOS, Linux
+Doesnt work: iOS, Android
+
+CTRL c / CTRL v – Copy / Paste
+Works: Windows 10/11, Linux
+Doesnt work: macOS (use COMMAND), iOS, Android
+
+CTRL a – Select all
+Works: Windows 10/11, Linux
+Doesnt work: macOS (use COMMAND), iOS, Android
+
+CTRL s – Save file
+Works: Windows 10/11, Linux
+Doesnt work: macOS (use COMMAND), iOS, Android
+
+CTRL z / CTRL y – Undo / Redo
+Works: Windows 10/11, Linux
+Doesnt work: macOS (use COMMAND), iOS, Android
+
+ALT TAB – Switch open apps
+Works: Windows 10/11, Linux
+Doesnt work: macOS (use COMMAND TAB), iOS, Android
+
+MENU – Open context menu
+Works: Windows 10/11, macOS, Linux
+Doesnt work: iOS, Android
+
+OTHER COMMANDS
+REM <text> – Add comment / documentation
+Works: All platforms
+
+REPEAT <n> – Repeat previous command n times
+Works: All platforms
+
+MEDIA KEYS
+VOLUME_UP / VOLUME_DOWN / MUTE – Adjust system volume
+Works: Windows 10/11, macOS, Linux
+Depends: iOS, Android
+
+PLAY_PAUSE – Play / pause media
+Works: Windows 10/11, macOS, Linux
+Depends: iOS, Android
+
+NEXT_TRACK / PREV_TRACK – Media navigation
+Works: Windows 10/11, macOS, Linux
+Depends: iOS, Android
+
+ANDROID APP NAVIGATION & INSTALLATION
+GUI r → Open launcher/app drawer
+TAB / UPARROW / DOWNARROW / LEFTARROW / RIGHTARROW → Navigate app icons
+ENTER → Open selected app
+REPEAT <n> → Repeat navigation to reach specific app
+
+Educational app install simulation:
+GUI r → Open launcher
+STRING “Play Store” → Type app store name
+ENTER → Open Play Store
+STRING <app name> → Search for app
+TAB / DOWNARROW → Navigate search results
+ENTER → Select app
+TAB → Move to Install button
+ENTER → Simulate installation
+
+iOS APP NAVIGATION & INSTALLATION
+Arrow keys → Navigate app icons on external keyboard
+ENTER → Open selected app
+STRING <app name> → Search in App Store
+TAB / Arrow keys → Navigate search results
+ENTER → Select app
+TAB → Move to “Get” / “Install” button
+ENTER → Simulate installation
+Note: Full installation often requires touch input
+
+MOBILE NAVIGATION SHORTCUTS
+Android: GUI b → Open default browser
+Android: GUI r → Open launcher
+Android: ALT TAB → Switch apps (Depends on version)
+Android: CTRL c / CTRL v → Copy/Paste in text fields (Depends on keyboard)
+iOS: Arrow keys → Navigate text/input fields
+iOS: ENTER → Confirm selection
+iOS: CTRL c / CTRL v → Copy/Paste (Depends on external keyboard)
+
+ALL MODIFIER COMBINATIONS (EDUCATIONAL, CROSS-PLATFORM)
+
+CTRL + <Key>
+Works: Windows 10/11, Linux
+Doesnt work: macOS (use COMMAND), iOS, Android
+
+CTRL + ALT + <Key>
+Works: Windows 10/11, Linux
+Doesnt work: macOS, iOS, Android
+
+CTRL + SHIFT + <Key>
+Works: Windows 10/11, Linux
+Doesnt work: macOS (use COMMAND + SHIFT), iOS, Android
+
+GUI + <Key>
+Works: Windows 10/11, macOS, Linux, Android
+Doesnt work: iOS
+
+GUI + SHIFT + <Key>
+Works: Windows 10/11, macOS, Linux, Android
+Doesnt work: iOS
+
+GUI + CTRL + <Key>
+Works: Windows 10/11, Linux
+Doesnt work: macOS (use COMMAND + CTRL), iOS, Android
+
+SHIFT + ALT + <Key>
+Works: Windows 10/11, Linux
+Doesnt work: macOS, iOS, Android
+
+PLATFORM NOTES
+macOS: Replace CTRL → COMMAND, ALT → OPTION for shortcuts
+iOS: Limited keyboard support; GUI key unavailable
+Android: GUI key opens launcher/app drawer; media keys depend on device

@@ -1,0 +1,13 @@
+REM ios rick roll
+
+GUI h
+DELAY 1000
+GUI SPACE
+DELAY 250
+STRING https://www.youtube.com/watch?v=iik25wqIuFo&list=RDiik25wqIuFo&start_radio=1
+DELAY 75
+TAB
+DELAY 75
+ENTER
+DELAY 150
+ENTER

