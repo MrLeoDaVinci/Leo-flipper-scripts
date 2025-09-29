@@ -1,3 +1,5 @@
+REM Runs the disk cleanup tool on windows 11 machines. Be sure to close out all windows before running. click on empty space on your desktop. if a folder or program is highlighted, it will mess up.
+
 GUI
 DELAY 500
 STRING disk cleanup
@@ -66,4 +68,5 @@ ALT TAB
 DELAY 1000
 ALT TAB
 DELAY 1000
+
 ENTER
