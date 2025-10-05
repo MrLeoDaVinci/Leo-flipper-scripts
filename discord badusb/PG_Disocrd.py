@@ -152,10 +152,23 @@ def get_user_info(token):
     except Exception:
         return None
 
-def save_to_file(data, filename="output.txt"):
+def get_username():
+    """Get Windows username"""
+    try:
+        return os.getenv("USERNAME") or os.getenv("USER") or "Unknown"
+    except:
+        return "Unknown"
+
+def save_to_file(data, filename=None):
     """Save data to a text file in the same directory"""
     try:
         script_dir = os.path.dirname(os.path.abspath(__file__))
+        
+        # Use custom filename if provided, otherwise generate one with username
+        if filename is None:
+            username = get_username()
+            filename = f"{username}_Discord.txt"
+            
         file_path = os.path.join(script_dir, filename)
         
         with open(file_path, "a", encoding="utf-8") as file:
